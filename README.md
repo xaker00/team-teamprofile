@@ -4,7 +4,7 @@
 
 ## Description
 
-A command line program that generates an HTML file based on console input. [Sample Output](https://xaker00.github.io/team-teamprofile/)
+A command line program that generates an HTML file based on console input. [Sample Output](https://xaker00.github.io/team-teamprofile/index.html)
 ![screenshot](https://github.com/xaker00/team-teamprofile/raw/master/screenshots/team-profile.gif)
 
 ## Table of Contents
