@@ -1,9 +1,13 @@
 const inquirer = require("inquirer");
+const fs = require("fs");
+
 const Manager = require("./lib/manager");
 const Employee = require("./lib/employee");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const Choice = require("inquirer/lib/objects/choice");
+
+const renderHtml = require("./src/renderHtml");
 
 const employee = new Employee();
 const engineer = new Engineer();
@@ -50,10 +54,11 @@ const start = async () => {
 
   console.log(team);
 
-  return;
-  await engineer.consoleInput();
-
-  console.log(engineer);
+  const html = renderHtml(team);
+  fs.writeFile('./dist/team.html', html, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  });
 };
 
 start();
